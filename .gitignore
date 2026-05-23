@@ -1,0 +1,7 @@
+# Ignore generated archive files
+website-files.zip
+*.zip
+
+# Ignore local large video files not suitable for GitHub hosting
+AUTOMATIC GATE CONTROL.mp4
+TEMPERATURE MONITORING SYSTEM.mp4

@@ -10,6 +10,31 @@
     </head>
 
     <body style="background-image: url('LIGHT%20DESIGN%20(2).png'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; height: 100vh;">
+        <nav class="ribbon">
+            <ul class="ribbon-list">
+                <li class="ribbon-heading">MENU</li>
+                <li class="ribbon-item ribbon-about">
+                    <button id="about-toggle" class="ribbon-about-toggle"><img class="ribbon-icon" src="background (2).png" alt="About">About</button>
+                    <div id="about-dropdown" class="contact-dropdown" aria-hidden="true">
+                        <p><strong>Email:</strong> <a href="mailto:irumvajoshua07@gmail.com">irumvajoshua07@gmail.com</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:+250791460551">+250 791460551</a></p>
+                        <p><strong>Website:</strong> <a href="https://youtu.be/qcvI9ZCCClA?si=oTxjimrZke1nD6Cm" target="_blank" rel="noopener noreferrer">https://youtu.be/qcvI9ZCCClA?si=oTxjimrZke1nD6Cm</a></p>
+                        <p><strong>YouTube:</strong> <a href="https://youtu.be/qcvI9ZCCClA?si=oTxjimrZke1nD6Cm" target="_blank" rel="noopener noreferrer">https://youtu.be/qcvI9ZCCClA?si=oTxjimrZke1nD6Cm</a></p>
+                    </div>
+                </li>
+                <li><button id="search-toggle" class="ribbon-btn"><img class="ribbon-icon" src="background (2).png" alt="Menu">Search</button></li>
+                <li><a href="projects.html#downloads"><img class="ribbon-icon" src="background (2).png" alt="Menu">Download</a></li>
+                <li><a href="projects.html#images"><img class="ribbon-icon" src="background (2).png" alt="Menu">Images</a></li>
+                <li><a href="index.html#videos"><img class="ribbon-icon" src="background (2).png" alt="Menu">Video</a></li>
+            </ul>
+        </nav>
+
+        <div id="search-overlay" class="search-overlay" aria-hidden="true">
+            <div class="search-box">
+                <input id="search-input" type="search" placeholder="Search site...">
+                <button id="search-close" class="ribbon-btn">Close</button>
+            </div>
+        </div>
         
 
             
@@ -20,6 +45,26 @@
                 <h1>Welcome to Electronic and Technology!!!</h1>
                 <h2>We Appreciate You Being Here!!!</h2>
                 <p>Here are all the things you need to know about electronics and technology. This website is based on training students in electronics and telecommunication engineering how to improve their skills. It also helps people become more skilled while studying.</p>
+
+                <section id="videos" class="video-section">
+                    <h3>Featured Video Tutorials</h3>
+                    <div class="video-gallery">
+                        <article class="video-card">
+                            <h4>AI Video Generation</h4>
+                            <video controls>
+                                <source src="LEARN%20AI%20VIDEO%20GENERATED%20(2).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </article>
+                        <article class="video-card">
+                            <h4>Learn AI Video Generator</h4>
+                            <video controls>
+                                <source src="LEARN%20AI%20VIDEO%20GENERATED%20(2).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </article>
+                    </div>
+                </section>
             </main>
         </div>
 
@@ -37,6 +82,36 @@
             // Optional: Log when page loads
             window.addEventListener('load', function() {
                 console.log('Electronic Skills Tips website loaded successfully');
+            });
+            // Search overlay handlers
+            document.addEventListener('DOMContentLoaded', function() {
+                const toggle = document.getElementById('search-toggle');
+                const overlay = document.getElementById('search-overlay');
+                const closeBtn = document.getElementById('search-close');
+                if (toggle && overlay && closeBtn) {
+                    toggle.addEventListener('click', function() {
+                        overlay.setAttribute('aria-hidden', 'false');
+                        document.getElementById('search-input').focus();
+                    });
+                    closeBtn.addEventListener('click', function() {
+                        overlay.setAttribute('aria-hidden', 'true');
+                    });
+                }
+
+                // About dropdown toggle
+                const aboutToggle = document.getElementById('about-toggle');
+                const aboutDropdown = document.getElementById('about-dropdown');
+                if (aboutToggle && aboutDropdown) {
+                    aboutToggle.addEventListener('click', function(e) {
+                        const hidden = aboutDropdown.getAttribute('aria-hidden') === 'true';
+                        aboutDropdown.setAttribute('aria-hidden', hidden ? 'false' : 'true');
+                    });
+                    document.addEventListener('click', function(e) {
+                        if (!aboutToggle.contains(e.target) && !aboutDropdown.contains(e.target)) {
+                            aboutDropdown.setAttribute('aria-hidden', 'true');
+                        }
+                    });
+                }
             });
         </script>
 
