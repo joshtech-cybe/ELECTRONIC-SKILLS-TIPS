@@ -95,7 +95,7 @@ p {
 
 .action-btn {
     background-color: var(--button-color);
-    color: white;
+    color: rgb(9, 188, 219);
     padding: 12px 30px;
     border: none;
     border-radius: 6px;
@@ -108,7 +108,7 @@ p {
 }
 
 .action-btn:hover {
-    background-color: darkred;
+    background-color: rgb(243, 223, 223);
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
@@ -119,7 +119,7 @@ p {
 
 .video-link {
     display: inline-block;
-    color: white;
+    color: rgb(78, 199, 7);
     background-color: var(--bg-color);
     padding: 12px 30px;
     text-decoration: none;
@@ -153,7 +153,7 @@ p {
     left: 0;
     bottom: 0;
     width: 220px;
-    background: rgba(20,20,20,0.88);
+    background: rgba(0, 12, 11, 0.88);
     backdrop-filter: blur(12px);
     z-index: 9999;
     padding: 20px 12px;
@@ -220,18 +220,33 @@ p {
     position: absolute;
     top: 0;
     left: 100%;
-    min-width: 240px;
-    background: rgba(255,255,255,0.98);
-    color: #111;
-    padding: 12px;
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    min-width: 260px;
+    background: rgba(8, 12, 28, 0.97);
+    color: #ffffff;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
     display: none;
     z-index: 10001;
 }
 .contact-dropdown[aria-hidden="false"] { display: block; }
-.contact-dropdown p { margin: 6px 0; font-size: 0.95em; }
-.contact-dropdown a { color: var(--primary-color); text-decoration: none; }
+.contact-dropdown p { 
+    margin: 8px 0; 
+    font-size: 0.98em; 
+    line-height: 1.5; 
+    color: #ffffff;
+}
+.contact-dropdown strong { color: #ffffff; }
+.contact-dropdown a { 
+    color: #8ddcff; 
+    text-decoration: none; 
+    font-weight: 700;
+}
+.contact-dropdown a:hover { 
+    color: #ffffff; 
+    text-decoration: underline;
+}
 
 /* Ensure page content is not hidden under the fixed ribbon */
 .container { padding-left: 260px; }
@@ -351,6 +366,80 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
     margin-top: 30px;
+}
+
+.downloads-section {
+    margin: 30px 0 10px;
+}
+
+.downloads-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.download-intro {
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.download-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.download-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.2em;
+}
+
+.download-frame {
+    width: 100%;
+    height: 420px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 12px;
+}
+
+.download-description {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.download-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: darkgreen;
+    transform: translateY(-1px);
 }
 
 .project-card {
