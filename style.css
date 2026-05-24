@@ -602,3 +602,21 @@ p {
 .ribbon {
     display: none;
 }
+.video-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;   /* space between videos */
+    align-items: center; /* center videos */
+}
+.video-card {
+    background: rgba(0,0,0,0.4);
+    padding: 15px;
+    border-radius: 10px;
+}
+.ribbon {
+    display: none;
+}
+
+.show-menu {
+    display: block;
+}

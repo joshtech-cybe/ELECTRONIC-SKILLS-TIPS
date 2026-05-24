@@ -13,7 +13,7 @@
         <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
        <nav class="ribbon" id="mobileMenu">
             <ul class="ribbon-list">
-                <li class="ribbon-heading">MENU</li>
+                
                 <li class="ribbon-item ribbon-about">
                     <button id="about-toggle" class="ribbon-about-toggle"><img class="ribbon-icon" src="background (2).png" alt="About">About</button>
                     <div id="about-dropdown" class="contact-dropdown" aria-hidden="true">
@@ -66,27 +66,26 @@
                         </article>
 
                         <article class="video-card">
-    <h4>AUTOMATIC GATE CONTROL</h4>
+     <h4>AUTOMATIC GATE CONTROL</h4>
 
-    <iframe width="560" height="315"
-    src="https://www.youtube.com/embed/q1EEPSaEZoU"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-    </iframe>
-</article>
-                      <article class="video-card">
-    <h5>TEMPERATURE MONITORING SYSTEM</h5>
+        <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/q1EEPSaEZoU"
+        title="YouTube video player"
+        frameborder="0"
+        allowfullscreen>
+        </iframe>
+    </article>
 
-    <iframe width="560" height="315"
-    src="https://www.youtube.com/embed/qcvI9ZCCClA"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-    </iframe>
-</article>
+    <article class="video-card">
+        <h4>TEMPERATURE MONITORING SYSTEM</h4>
+
+        <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/qcvI9ZCCClA"
+        title="YouTube video player"
+        frameborder="0"
+        allowfullscreen>
+        </iframe>
+    </article>
                     </div>
                 </section>
             </main>
@@ -140,6 +139,7 @@
             });
              function toggleMenu() {
     const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("show-menu");
 
     if (
         menu.style.display === "none" ||
