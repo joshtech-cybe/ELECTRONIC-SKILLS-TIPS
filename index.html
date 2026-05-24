@@ -65,20 +65,27 @@
                             </video>
                         </article>
                         <article class="video-card">
-                            <h6>TEMPERATURE MONITORING SYSTEM</h6>
+    <h4>TEMPERATURE MONITORING SYSTEM</h4>
 
-                     <video controls width="500">
-                      <source src="temperature-monitoring-system.mp4" type="video/mp4">
-                                  </video>
-                                your browser does not support the video tag.
-                        </article>
-                        <article class="video-card">
-                            <h6>AUTOMATIC GATE CONTROL </h6>
-                            <video controls width="500">
-                                <source src="automatic-gate-control.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                                </video>
-                                </article>
+    <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/https://youtu.be/qcvI9ZCCClA?si=6bwo4py1obEx6u-r"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+    </iframe>
+</article>
+                      <article class="video-card">
+    <h4>TEMPERATURE MONITORING SYSTEM</h4>
+
+    <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/https://youtu.be/q1EEPSaEZoU?si=bbUlHaXNmpphdrj-"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+    </iframe>
+</article>
                     </div>
                 </section>
             </main>
@@ -133,10 +140,13 @@
              function toggleMenu() {
     const menu = document.getElementById("mobileMenu");
 
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
+    if (
+        menu.style.display === "none" ||
+        menu.style.display === ""
+    ) {
         menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
     }
 }
         </script>
