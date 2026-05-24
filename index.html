@@ -23,10 +23,10 @@
                         <p><strong>YouTube:</strong> <a href="https://youtu.be/qcvI9ZCCClA?si=oTxjimrZke1nD6Cm" target="_blank" rel="noopener noreferrer">https://youtu.be/qcvI9ZCCClA?si=oTxjimrZke1nD6Cm</a></p>
                     </div>
                 </li>
-                <li><button id="search-toggle" class="ribbon-btn"><img class="ribbon-icon" src="background (2).png" alt="Menu">Search</button></li>
-                <li><a href="projects.html#downloads"><img class="ribbon-icon" src="background (2).png" alt="Menu">Download</a></li>
-                <li><a href="projects.html#images"><img class="ribbon-icon" src="background (2).png" alt="Menu">Images</a></li>
-                <li><a href="index.html#videos"><img class="ribbon-icon" src="background (2).png" alt="Menu">Video</a></li>
+                <li><button id="search-toggle" class="ribbon-btn"><img class="ribbon-icon" src="background (2).png" alt="Menu" onclick="openImage(this)" style= "cursor: pointer;">Search</button></li>
+                <li><a href="projects.html#downloads"><img class="ribbon-icon" src="background (2).png" alt="Menu"onclick="openImage(this)" style= "cursor: pointer;">Download</a></li>
+                <li><a href="projects.html#images"><img class="ribbon-icon" src="background (2).png" alt="Menu"onclick="openImage(this)" style= "cursor: pointer;">Images</a></li>
+                <li><a href="index.html#videos"><img class="ribbon-icon" src="background (2).png" alt="Menu" onclick="openImage(this)" style= "cursor: pointer;">Video</a></li>
             </ul>
         </nav>
 
@@ -77,7 +77,7 @@
     </article>
 
     <article class="video-card">
-        <h4>TEMPERATURE MONITORING SYSTEM</h4>
+        <h5>TEMPERATURE MONITORING SYSTEM</h5>
 
         <iframe width="560" height="315"
         src="https://www.youtube.com/embed/qcvI9ZCCClA"
@@ -98,6 +98,16 @@
        
 
         <script>
+            function openImage(element) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("popupTargetImg");
+    modal.style.display = "flex";
+    modalImg.src = element.src;
+}
+
+function closeImage() {
+    document.getElementById("imageModal").style.display = "none";
+}
             function showWelcomeMessage() {
                 // Navigate to projects page instead of showing alerts
                 window.location.href = 'projects.html';
@@ -151,6 +161,10 @@
     }
 }
         </script>
+        <div id="imageModal" class="image-popup-modal" onclick="closeImage()">
+    <span class="close-popup">&times;</span>
+    <img class="popup-content" id="popupTargetImg" alt="Enlarged view">
+</div>
 
     </body>
 </html>
