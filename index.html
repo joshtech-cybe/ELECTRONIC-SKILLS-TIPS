@@ -10,8 +10,8 @@
     </head>
 
     <body style="background-image: url('LIGHT%20DESIGN%20(2).png'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; height: 100vh;">
-        
-        <nav class="ribbon">
+        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+       <nav class="ribbon" id="mobileMenu">
             <ul class="ribbon-list">
                 <li class="ribbon-heading">MENU</li>
                 <li class="ribbon-item ribbon-about">
@@ -88,6 +88,7 @@
             <button class="action-btn" onclick="showWelcomeMessage()">CLICK HERE TO CONTINUE</button>
             <a href="https://youtu.be/7fvlPtCzD8o?si=fGcAwjQkWbAX4juz" class="video-link" target="_blank" rel="noopener noreferrer">GO TO YOUTUBE</a>
         </div>
+       
 
         <script>
             function showWelcomeMessage() {
@@ -129,6 +130,15 @@
                     });
                 }
             });
+             function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
         </script>
 
     </body>
